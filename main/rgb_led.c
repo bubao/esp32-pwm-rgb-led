@@ -61,33 +61,39 @@ void ledc_init(void)
     ledc_timer_config(&ledc_timer);
 
     // 配置红色通道
-    ledc_channel_config_t ledc_channel_red = { .speed_mode = LEDC_MODE,
+    ledc_channel_config_t ledc_channel_red = {
+        .speed_mode = LEDC_MODE,
         .channel = LEDC_CHANNEL_RED,
         .timer_sel = LEDC_TIMER,
         .intr_type = LEDC_INTR_DISABLE,
         .gpio_num = LEDC_GPIO_RED,
         .duty = 0, // 初始占空比
-        .hpoint = 0 };
+        .hpoint = 0
+    };
     ledc_channel_config(&ledc_channel_red);
 
     // 配置绿色通道
-    ledc_channel_config_t ledc_channel_green = { .speed_mode = LEDC_MODE,
+    ledc_channel_config_t ledc_channel_green = {
+        .speed_mode = LEDC_MODE,
         .channel = LEDC_CHANNEL_GREEN,
         .timer_sel = LEDC_TIMER,
         .intr_type = LEDC_INTR_DISABLE,
         .gpio_num = LEDC_GPIO_GREEN,
         .duty = 0, // 初始占空比
-        .hpoint = 0 };
+        .hpoint = 0
+    };
     ledc_channel_config(&ledc_channel_green);
 
     // 配置蓝色通道
-    ledc_channel_config_t ledc_channel_blue = { .speed_mode = LEDC_MODE,
+    ledc_channel_config_t ledc_channel_blue = {
+        .speed_mode = LEDC_MODE,
         .channel = LEDC_CHANNEL_BLUE,
         .timer_sel = LEDC_TIMER,
         .intr_type = LEDC_INTR_DISABLE,
         .gpio_num = LEDC_GPIO_BLUE,
         .duty = 0, // 初始占空比
-        .hpoint = 0 };
+        .hpoint = 0
+    };
     ledc_channel_config(&ledc_channel_blue);
 }
 
